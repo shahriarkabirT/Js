@@ -19,28 +19,30 @@ document.getElementsByClassName("my_class")[0].appendChild(heading);
 
 //Dom mouse event
 console.clear();
-const div = document.querySelector(".mouse");
+var mousedom = document.querySelector(".mouse");
 
-div.addEventListener("click",function(){
+mousedom.addEventListener("click",function(){
   console.log("Mouse clicked");
  });
- div.addEventListener("dblclick",function(){
+ mousedom.addEventListener("dblclick",function(){
      console.log("Mouse double clicked");
  });
- div.addEventListener("mousedown",function(){
+ mousedom.addEventListener("mousedown",function(){
         console.log("Mouse down");
  });
- div.addEventListener("mouseup",function(){
+ mousedom.addEventListener("mouseup",function(){
      console.log("Mouse up");
  });
- div.addEventListener("mouseenter",function(){
-     console.log("Mouse enter");
+ mousedom.addEventListener("mouseenter",function(){
+ console.log("Mouse enter");
  });
- div.addEventListener("mouseleave",function(){
+ mousedom.addEventListener("mouseleave",function(){
      console.log("Mouse leave");
+     console.clear();
  });
- div.addEventListener("mouseover",function(){
+ mousedom.addEventListener("mouseover",function(){
     console.log("Mouse over");
+    
  });
 
 /* div.addEventListener("mousemove",function(e){
@@ -53,7 +55,7 @@ div.addEventListener("click",function(){
  //<!--input box and change event-->
 
 
-const input = document.querySelector("input[name=input-name]");
+var input = document.querySelector("input[name=input-name]");
 
 input.addEventListener("change",changeHandler);
 
@@ -62,5 +64,33 @@ function changeHandler(e){
     console.log(e.type);
     console.log(e.target);
     console.log(e.target.value);
+    console.log(e.target.innerHTML);
+    console.log(e.target.textContent);
+}
+
+//checkbox with addlistener
+
+var programs = document.querySelectorAll("input[name=program]");
+console.log(programs);
+
+Array.from(programs).map((p)=>{
+p.addEventListener("change",programHandler);
+
+});
+
+function programHandler(e){
+    if(e.target.checked){
+    console.log("checked");
+    console.log(e.target.value);
+}
+}
+//select with addlistener
+
+var selector = document.querySelector('#department');
+
+selector.addEventListener("change", deptHandler);
+
+function deptHandler(e){
+   console.log(e.target.value);
 }
 
