@@ -20,7 +20,7 @@ document.getElementsByClassName("my_class")[0].appendChild(heading);
 //Dom mouse event
 console.clear();
 var mousedom = document.querySelector(".mouse");
-
+/*
 mousedom.addEventListener("click",function(){
   console.log("Mouse clicked");
  });
@@ -50,13 +50,14 @@ mousedom.addEventListener("click",function(){
     console.log("CientX = "+ e.clientX + " ClientY = "+ e.clientY);
     console.log("OffsetX = "+ e.offsetX + " Offset Y = " + e.offsetY);
  });
-
+*/
 mousedom.addEventListener("click", function(e){
     console.log(e);
     console.log(e.target);
     console.log(e.target.id);
     console.log(e.target.className);
     console.log(e.target.innerHTML);
+    console.log(e.target.textContent);
 });
  //<!--input box and change event-->
 
@@ -100,3 +101,12 @@ function deptHandler(e){
    console.log(e.target.value);
 }
 
+const buttons = document.querySelectorAll('.btn');
+
+console.log(buttons);
+
+Array.from(buttons).map((button)=>{
+    button.addEventListener("click",function(e){
+        console.log(e.target.innerHTML);
+    });
+});
