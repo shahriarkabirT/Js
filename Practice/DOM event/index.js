@@ -38,20 +38,26 @@ mousedom.addEventListener("click",function(){
  });
  mousedom.addEventListener("mouseleave",function(){
      console.log("Mouse leave");
-     console.clear();
+    // console.clear();
  });
  mousedom.addEventListener("mouseover",function(){
     console.log("Mouse over");
     
  });
 
-/* div.addEventListener("mousemove",function(e){
+ mousedom.addEventListener("mousemove",function(e){
     console.log("Mouse move");
     console.log("CientX = "+ e.clientX + " ClientY = "+ e.clientY);
     console.log("OffsetX = "+ e.offsetX + " Offset Y = " + e.offsetY);
- });*/
+ });
 
-
+mousedom.addEventListener("click", function(e){
+    console.log(e);
+    console.log(e.target);
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.innerHTML);
+});
  //<!--input box and change event-->
 
 
