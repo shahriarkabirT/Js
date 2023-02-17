@@ -5,3 +5,8 @@
     font-family: sans-serif;
     height: 100px;
 }
+
+.heading{
+    color: rgb(255, 255, 255);
+    background-color: red;
+}

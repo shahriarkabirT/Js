@@ -21,31 +21,46 @@ document.getElementsByClassName("my_class")[0].appendChild(heading);
 console.clear();
 const div = document.querySelector(".mouse");
 
-// div.addEventListener("click",function(){
-//     console.log("Mouse clicked");
-// });
-// div.addEventListener("dblclick",function(){
-//     console.log("Mouse double clicked");
-// });
-// div.addEventListener("mousedown",function(){
-//     console.log("Mouse down");
-// });
-// div.addEventListener("mouseup",function(){
-//     console.log("Mouse up");
-// });
-// div.addEventListener("mouseenter",function(){
-//     console.log("Mouse enter");
-// });
-// div.addEventListener("mouseleave",function(){
-//     console.log("Mouse leave");
-// });
-// div.addEventListener("mouseover",function(){
-//     console.log("Mouse over");
-// });
-// div.addEventListener("mousemove",function(e){
-//     console.log("Mouse move");
-//     console.log("CientX = "+ e.clientX + " ClientY = "+ e.clientY);
-//     console.log("OffsetX = "+ e.offsetX + " Offset Y = " + e.offsetY);
-// });
+div.addEventListener("click",function(){
+  console.log("Mouse clicked");
+ });
+ div.addEventListener("dblclick",function(){
+     console.log("Mouse double clicked");
+ });
+ div.addEventListener("mousedown",function(){
+        console.log("Mouse down");
+ });
+ div.addEventListener("mouseup",function(){
+     console.log("Mouse up");
+ });
+ div.addEventListener("mouseenter",function(){
+     console.log("Mouse enter");
+ });
+ div.addEventListener("mouseleave",function(){
+     console.log("Mouse leave");
+ });
+ div.addEventListener("mouseover",function(){
+    console.log("Mouse over");
+ });
 
+/* div.addEventListener("mousemove",function(e){
+    console.log("Mouse move");
+    console.log("CientX = "+ e.clientX + " ClientY = "+ e.clientY);
+    console.log("OffsetX = "+ e.offsetX + " Offset Y = " + e.offsetY);
+ });*/
+
+
+ //<!--input box and change event-->
+
+
+const input = document.querySelector("input[name=input-name]");
+
+input.addEventListener("change",changeHandler);
+
+function changeHandler(e){
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(e.target.value);
+}
 
