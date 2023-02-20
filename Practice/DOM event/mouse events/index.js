@@ -105,6 +105,9 @@ const buttons = document.querySelectorAll('.btn');
 
 console.log(buttons);
 
+
+//buttons with event listener and map
+
 Array.from(buttons).map((button)=>{
     button.addEventListener("click",function(e){
         console.log(e.target.innerHTML);
