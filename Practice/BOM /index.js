@@ -1,9 +1,8 @@
-var inputValue ;
-function getInputValue() {
-    var input = document.getElementById("8.30");
-     inputValue = input.value;
-    console.log(inputValue);
-    alert("The input value is: " + inputValue);
-  }
+//BOM(Browser Object Model)
 
-  localStorage.setItem("830sat",inputValue);
+//window object
+//location object
+
+console.clear();
+
+console.log(window);
