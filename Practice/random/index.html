@@ -1,36 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-
-    <title> Dom events </title>
-
+	<title>Login Page</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<form>
+		<h2>Login</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+		<input type="submit" value="Login" onclick="validate()">
+	</form>
 
-   <!--ON click  , DOM   -->
-
-   <div class="name" onclick="this.innerHTML='Shahriar Kabir'">Humaira Jannat</div> 
-   <div class="nm" onclick="changeName(this)">Humaira Jannat</div> 
-   <button id="n">Humaira Jannat</button>
-   <h1 class= "demo">hello</h1>
-
-  <!--Query Selector  -->  
-
-    <div class="my_class">
-        <h1>Hello</h1>
-        
-    </div>
-
-
-
-
+	<script src="script.js"></script>
 </body>
-
-
-
-<script src="index.js"></script>
 </html>

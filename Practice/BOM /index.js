@@ -81,3 +81,99 @@ btn.addEventListener("click",function(){
 
 welcome();
 */
+
+
+                    //Browser Object Model | Timing events
+/*
+var timeout = document.querySelector(".text");
+
+
+setTimeout(() => {
+    timeout.textContent = "this will be arrived after two seconds"; 
+}, 2000 );
+
+setTimeout(() => {
+    timeout.textContent = "this will be arrived after 4 seconds";
+}, 4000 );
+
+setTimeout(() => {
+    timeout.textContent = "It will be vanished after 8 seconds";
+}, 6000 );
+
+setTimeout(() => {
+    timeout.textContent = "";
+}, 8000 );
+
+*/
+
+                //SetInterval
+//  var strt = document.getElementById("strt");
+
+//                 var hour = document.querySelector(".hour");
+//                 var minute = document.querySelector(".minute");
+//                 var second = document.querySelector(".second");
+// var secondCount = 0; 
+// var minuteCount = 0;
+// var hourCount = 0 ;
+// strt.addEventListener('click',function(){
+
+// setInterval(() => {
+//     secondCount++;
+//     if(secondCount==60) secondCount = 1;
+//     second.textContent = secondCount;
+// }, 1000);
+
+// setInterval(() => {
+//     minuteCount++;
+
+//     minute.textContent = minuteCount;
+// }, 60000);
+
+// setInterval(() => {
+//     hourCount++;
+
+//     hour.textContent = hourCount;
+// }, 3600000);
+
+// });
+
+
+
+
+
+
+
+const showTime = document.querySelector(".showTime");
+const shownTime = document.querySelector(".localTime")
+
+showTime.addEventListener("click",()=>{
+
+
+    setInterval(() => {
+    
+  let time = new Date();
+let hour = time.getHours();
+let minute = time.getMinutes();
+let second = time.getSeconds();
+
+hour =formatTime(hour);
+minute= formatTime(minute);
+second = formatTime(second);
+
+
+
+let Time = hour + ": " + minute + ": " + second ;
+     shownTime.textContent = Time;
+    }, 1000);
+
+
+
+});
+
+function formatTime(value){
+if(value<10) {
+    value = "0"+value;
+}
+
+return value;
+}
