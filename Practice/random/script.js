@@ -1,9 +1,4 @@
-function validate() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    if (username == "user" && password == "password") {
-        alert("Login successful!");
-    } else {
-        alert("Incorrect username or password.");
-    }
-}
+const prompt = require('prompt-sync')();
+
+var fname = prompt("Enter your first name: ");
+console.log(`your first name is ${fname}`);

@@ -1,0 +1,257 @@
+body{
+    background-image: url("photos/background.jpg");
+    padding:20px;
+    margin: 0px;
+    font-family:monospace, 'Times New Roman', Times, serif;
+}
+
+/* nav style */
+
+.nav-wrapper{
+    display:flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper>.left-side> div {
+    margin-right: 20px;
+    font-size: 1em; 
+    text-transform: uppercase;
+}
+.nav-link-wrapper {
+    height:22px ;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+.nav-link-wrapper a {
+    color:#8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+ 
+}
+.nav-link-wrapper:hover {
+    border-bottom:1px solid black;
+    
+}
+.nav-link-wrapper a:hover {
+        color: black;
+    }
+.container{
+    height: 600px;
+    width: 100%;
+    background-image: url("photos/iubat1.jpg");
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 5px 5px;
+}
+/*about me*/
+.profile-picture img{
+    width: 100%;
+}
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.news{
+    display: flex;
+
+}
+.breaking-news{
+    background-color: rgb(110, 109, 134);
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+.slide{
+    height: 10px;
+    width: 100%;
+    padding-top: 8px;
+}
+*{
+	box-sizing:border-box;
+}
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+}
+
+.table td,.table th{
+    padding:25px 20px;
+    text-align: center;
+    font-size:16px;
+    border: 1px solid rgb(7, 7, 7);
+    
+   
+  }
+  
+
+  
+  .table th{
+	background-color: rgba(9, 48, 44, 0.788);
+	color:#000000;
+    
+}
+
+.table tbody tr:nth-of-type(even){
+    background-color:rgba(74, 126, 182,.4);
+}
+    .table tbody tr:nth-of-type(odd){
+        background-color:rgba(12, 39, 59,.4);
+}
+.table tbody tr:last-of-type{
+    border-bottom:2px solid rgb(31, 76, 97);
+}
+
+.meet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom:black;
+    
+    transition: border-bottom 0.5s;
+}
+.meet a{
+
+
+   
+    background-color:rgba(12, 39, 59,.4);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.5s;
+    
+ 
+}
+.meet a:hover{
+    color:#ffffff;
+    background-color:#030d61;
+}
+.meet :hover{ 
+    border-bottom: 0.5px solid black;
+    border-radius: 5px;
+   
+}
+
+/* responsive */
+
+@media(max-width: 500px){
+
+    
+	.table thead{
+		display: none;
+	}
+
+	.table, .table thead, .table th, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+
+
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: center;
+		padding-left: 0%;
+		position: relative;
+	}
+
+    .table th{
+		padding-left: 0%;
+		text-align: center;
+		position: relative;
+    }
+    .table th::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+    }
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+    .meet, .meet a{
+        display: block;
+        width: 100%;
+        
+    }
+        .meet a{
+            text-align: center;
+		padding-left: 0px;
+        
+        }
+
+}
+
+/* clock */
+#clockContainer{  
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    width: 40vw; 
+    background: url(photos/clock.png) no-repeat;
+    background-size: 100%;
+}
+
+#hour, #minute, #second{
+    position: absolute;
+    background: black;
+    transform-origin: bottom;
+    border-right: 1px solid black;
+
+}
+#hour, #minute, #second:before{
+
+content: "";
+
+height: auto;
+width: auto;
+}
+
+#hour{
+    width: 1.8%;
+    height: 20%;
+    top: 32%;
+    left: 48.85%;
+    opacity: 0.8; 
+    
+}
+#minute{
+    width: 1.6%;
+    height: 25%;
+    top: 27%;
+    left: 48.9%;
+    opacity: 0.8;  
+}
+#second{
+
+    width: 1%;
+    height: 32%;
+    top: 20%;
+    left: 49.25%;
+    opacity: 0.8; 
+    
+}
+
