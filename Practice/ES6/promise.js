@@ -1,4 +1,4 @@
-const mark = 98;
+const mark = 90;
 
 
 
@@ -16,7 +16,7 @@ else{
 
 promise
     .then((value)=>{
-        console.log(value);
+       console.log(value);
     })
     .catch((err)=>{
         console.log(err);
