@@ -1,6 +1,8 @@
 let payment = true;
 let mark = 80;
 
+let payment2 = true;
+let mark2 = 90;
 
 function enroll (callback){
     console.log("Course enrolment.....");
@@ -15,23 +17,40 @@ function enroll (callback){
     }
     },2000)
 }
+function getCirtificate(name){
+    setTimeout(function(){
+        console.log( name + " has passed");
+    },0)
+}
+
 function processing(callback){
     console.log("Course is processing....");
     setTimeout(function(){
     if(mark>=80){
-        callback();
+        callback("Shahriar");
     }
     else{
         console.log("You are an idiot");
     }
     },2000)
-   
 }
-function getCirtificate(){
-    console.log("You have passed");
+
+function processing2(callback){
+    console.log("Course is processing....");
+    setTimeout(function(){
+    if(mark>=80){
+        callback("Humaira");
+    }
+    else{
+        console.log("You are an idiot");
+    }
+    },2000)
 }
 
 
 enroll(function(){
     processing(getCirtificate)
-})
+});
+enroll(function(){
+    processing2(getCirtificate)
+});
