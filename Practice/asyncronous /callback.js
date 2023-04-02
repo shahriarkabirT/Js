@@ -4,30 +4,26 @@ let mark = 80;
 let payment2 = true;
 let mark2 = 90;
 
-function enroll (callback){
-    console.log("Course enrolment.....");
+function enroll (person,callback){
+    console.log(`Course enrolment for ${person}...`);
 
     setTimeout(function(){
     if(payment){
-        console.log("Course enrolment is done.");
-    callback();
+        console.log(`Course enrolment is done for ${person}.`);
+    callback(person);
     }
     else{
-        console.log("Course enrolment is failed!!");
+        console.log(`Course enrolment is failed for ${person}!!`);
     }
     },2000)
 }
-function getCirtificate(name){
-    setTimeout(function(){
-        console.log( name + " has passed");
-    },0)
-}
 
-function processing(callback){
-    console.log("Course is processing....");
+
+function processing(person,callback){
+    console.log(`Course is processing for ${person}....`);
     setTimeout(function(){
     if(mark>=80){
-        callback("Shahriar");
+        callback();
     }
     else{
         console.log("You are an idiot");
@@ -39,7 +35,7 @@ function processing2(callback){
     console.log("Course is processing....");
     setTimeout(function(){
     if(mark>=80){
-        callback("Humaira");
+        callback();
     }
     else{
         console.log("You are an idiot");
@@ -47,10 +43,18 @@ function processing2(callback){
     },2000)
 }
 
-
-enroll(function(){
-    processing(getCirtificate)
+function getCirtificate(name){
+    setTimeout(function(){
+        console.log( name + " has passed");
+    },0)
+}
+enroll("Shahriar" ,function(person){
+    processing(person,function(){
+        getCirtificate(person);
+    })
 });
-enroll(function(){
-    processing2(getCirtificate)
+enroll("Humaira" ,function(person){
+    processing(person,function(){
+        getCirtificate(person);
+    })
 });
