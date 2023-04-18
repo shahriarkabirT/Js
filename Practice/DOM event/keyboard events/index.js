@@ -16,16 +16,16 @@ var text = document.getElementById("textarea");
 
   
 text.addEventListener("keypress",function(){
-  console.log("keypress");
+ // console.log("keypress");
   });
   console.clear();
 
   text.addEventListener("keyup",function(e){
-    console.log(e.code);
+   console.log(e.code);
     console.log(e.key);
     console.log(e.shiftKey);
     if(e.shiftKey){
       console.log("shitkey + "+ e.key + " is pressed");
-    }
+   }
     
     });

@@ -20,7 +20,7 @@ document.getElementsByClassName("my_class")[0].appendChild(heading);
 //Dom mouse event
 console.clear();
 var mousedom = document.querySelector(".mouse");
-/*
+
 mousedom.addEventListener("click",function(){
   console.log("Mouse clicked");
  });
@@ -38,10 +38,9 @@ mousedom.addEventListener("click",function(){
  });
  mousedom.addEventListener("mouseleave",function(){
      console.log("Mouse leave");
-    // console.clear();
+     console.clear();
  });
  mousedom.addEventListener("mouseover",function(){
-    console.log("Mouse over");
     
  });
 
@@ -50,7 +49,7 @@ mousedom.addEventListener("click",function(){
     console.log("CientX = "+ e.clientX + " ClientY = "+ e.clientY);
     console.log("OffsetX = "+ e.offsetX + " Offset Y = " + e.offsetY);
  });
-*/
+
 mousedom.addEventListener("click", function(e){
     console.log(e);
     console.log(e.target);
