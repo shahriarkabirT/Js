@@ -31,12 +31,19 @@
 }
 
 
- meeting 
- .then(getDetails)
- .then((res)=>{
-    console.log(res);
- })
- .catch((err)=>{
-    console.log(err.message);
- })
+//  meeting 
+//  .then(getDetails)
+//  .then((res)=>{
+//     console.log(res);
+//  })
+//  .catch((err)=>{
+//     console.log(err.message);
+//  })
 
+async function myMeeting(){
+    const meetingDetails = await meeting;
+    const calandar = await getDetails(meetingDetails);
+    console.log(calandar);
+}
+
+myMeeting();

@@ -1,5 +1,5 @@
 let payment = true;
-let mark = 80;
+let mark = 50;
 
 let payment2 = true;
 let mark2 = 90;

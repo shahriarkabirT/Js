@@ -1,4 +1,4 @@
-const print= ()=>{
+const print = ()=>{
 
     console.log(1);
 
