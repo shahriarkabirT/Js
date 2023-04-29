@@ -9,6 +9,7 @@ const task2 = (callback) =>{
     }, 2000);
    
     
+    
 }
 const task3 = () =>{
     console.log("Task 3 is done");
