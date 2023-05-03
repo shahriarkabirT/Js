@@ -10,6 +10,7 @@ display.addEventListener('click',()=>{
     xhr.onload = function() {
      btn.innerHTML =this.responseText;
      console.log(this.getAllResponseHeaders());
+     console.log(this.getResponseHeader("date"));
     }
     //prepare request 
     xhr.open("GET", url);   //3rd parameter as false means syncronous
