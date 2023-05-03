@@ -1,4 +1,0 @@
-
- <p><h1>Lorem ipsum dolor sit amet consectetur,
- adipisicing elit. Eum eligendi est eius n  ecessitatibus laborum, dicta aspernatur excem turi aliquam cupiditate labore vitae officiis
- magnam repudiandae beatae cum explicabo doloremque repellendus et.</h1></p>
