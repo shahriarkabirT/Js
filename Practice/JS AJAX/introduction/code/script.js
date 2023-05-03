@@ -1,8 +1,10 @@
 
 const display = document.querySelector("#btn");
-display.addEventListener('click',getData);
+display.addEventListener('click',()=>{
+  getData("../data/data.txt");
+});
 
-  function getData(){  
+  function getData(url){  
     //create a new request 
     const xhr = new XMLHttpRequest();
     //what to do when response arrives
@@ -10,7 +12,7 @@ display.addEventListener('click',getData);
      btn.innerHTML = xhr.responseText;
     }
     //prepare request 
-    xhr.open("GET", "../data/data.txt");
+    xhr.open("GET", url);
     //request send
     xhr.send();
 }
