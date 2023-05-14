@@ -33,7 +33,7 @@ function sendRequest(method,url,data){
 }
 
 function getData(){
-  sendRequest("GET","https://jsonplaceholder.typicode.com/pots/1")
+  sendRequest("GET","https://jsonplaceholder.typicode.com/posts/1")
   .then(res=>{console.log(res)})
   .catch(err => console.log(err));
 }
