@@ -32,7 +32,7 @@ ctx.arc(340, 250, 5, 0, Math.PI*2);
 ctx.fill();
 
 // Draw the windows
-ctx.fillStyle = '#dfe6e9';
+ctx.fillStyle = '#569647';
 ctx.fillRect(220, 120, 60, 60);
 ctx.fillRect(320, 120, 60, 60);
 
