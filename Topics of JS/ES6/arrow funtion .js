@@ -10,8 +10,11 @@ const tasin = () => "arrow funtion";
 const etu = () =>{
     return "arrow funtion with return";
 }
+const cgpa = (a, b)=>{
+    return a+b;
+}
 
-
+console.log(cgpa(3.45,3.63));
 console.log(tashin());
 console.log(humaira());
 console.log(tasin());
