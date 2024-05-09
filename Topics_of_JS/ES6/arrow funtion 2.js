@@ -40,7 +40,7 @@ console.log(name());
 
 */
 
-const name = () => student.filter((x)=> x.cg>3).map((y)=> y.name);          //precise way
+const name = () => student.filter((x) => x.cg>3).map((y)=> y.name);          //precise way
 
 console.log(name());
 
